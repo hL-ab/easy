@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/easy.iml" filepath="$PROJECT_DIR$/.idea/easy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easy-annotation/easy-annotation.iml" filepath="$PROJECT_DIR$/easy-annotation/easy-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easy-convert/easy-convert.iml" filepath="$PROJECT_DIR$/easy-convert/easy-convert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easy-lang/easy-lang.iml" filepath="$PROJECT_DIR$/easy-lang/easy-lang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easy-web/easy-web.iml" filepath="$PROJECT_DIR$/easy-web/easy-web.iml" />
+    </modules>
+  </component>
+</project>
