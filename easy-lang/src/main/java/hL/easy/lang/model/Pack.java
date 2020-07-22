@@ -2,6 +2,8 @@ package hL.easy.lang.model;
 
 import hL.easy.lang.commons.Objects;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * @author @HL
@@ -68,7 +70,11 @@ public class Pack<T> implements Serializable, Cloneable, Jsonable, Comparable<Pa
 
     @Override
     public Pack<T> clone() {
-        return new Pack<T>(Objects.clone(this.me));
+        try {
+            return ((Pack) super.clone()).me(Objects.clone(this.me));
+        } catch (CloneNotSupportedException e) {
+            return new Pack<>(Objects.clone(this.me));
+        }
     }
 
     @Override

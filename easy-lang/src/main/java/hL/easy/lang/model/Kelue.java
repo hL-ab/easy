@@ -11,7 +11,7 @@ public class Kelue<U, V> implements Serializable, Cloneable, Jsonable {
 
     private static final long serialVersionUID = -8975119636992806119L;
 
-    private transient static final String TO_JSON = "{\"key\":\"%s\",\"value\":\"%s\"}";
+    private transient static final String TO_JSON = "{\"key\":%s,\"value\":%s}";
 
     protected U key;
     protected V value = null;
@@ -60,7 +60,12 @@ public class Kelue<U, V> implements Serializable, Cloneable, Jsonable {
 
     @Override
     public Kelue<U, V> clone() {
-        return new Kelue<>(Objects.clone(this.key), Objects.clone(this.value));
+        try {
+            return ((Kelue) super.clone()).key(Objects.clone(this.key))
+                .value(Objects.clone(this.value));
+        } catch (CloneNotSupportedException e) {
+            return new Kelue<>(Objects.clone(this.key), Objects.clone(this.value));
+        }
     }
 
     @Override

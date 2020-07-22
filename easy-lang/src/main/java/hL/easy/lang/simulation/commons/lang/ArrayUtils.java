@@ -41,4 +41,5 @@ public class ArrayUtils {
             return getLength(array) == 0;
         }
     }
+
 }

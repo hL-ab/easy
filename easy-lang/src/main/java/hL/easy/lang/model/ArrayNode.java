@@ -44,6 +44,12 @@ public class ArrayNode<T> extends Kelue<Integer, T> implements INode<T> {
 
     @Override
     public ArrayNode<T> clone() {
-        return new ArrayNode<>(key.intValue(), Objects.clone(this.value));
+        Object clone = super.clone();
+        if (clone instanceof ArrayNode) {
+            return ((ArrayNode) clone).index(Objects.clone(this.key))
+                .data(Objects.clone(this.value));
+        } else {
+            return new ArrayNode<>(key.intValue(), Objects.clone(this.value));
+        }
     }
 }
